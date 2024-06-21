@@ -20,12 +20,15 @@ const Board = ({ squares, onClick }) => {
         rowSquares.push(renderSquare(row * 8 + col));
       }
 
+
+
       board.push(
-        <Box key={row} display='flex' sx={{ border: '2px solif pink'}}>
+        <Box key={row} display='flex'>
           {rowSquares}
         </Box>
       );
     }
+
     return board;
   };
 

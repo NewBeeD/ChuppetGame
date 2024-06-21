@@ -3,7 +3,7 @@ import Cell from './Cell';
 
 const Square = ({value, onClick}) => {
 
-  const xs_size = 40;
+  const xs_size = 45;
   const sm_size = 70;
   
   return (

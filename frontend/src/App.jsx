@@ -1,7 +1,6 @@
 // src/App.js
 import { useState } from 'react';
 import Board from './Components/Board';
-import './App.css';
 import isValidCapture from './Logic/IsValidCapture';
 import isValidMove from './Logic/IsValidMove';
 import { Box } from '@mui/material';
@@ -24,16 +23,17 @@ const App = () => {
 
   const [squares, setSquares] = useState(initializeBoard);
 
-  console.log(squares);
   const [isWhiteNext, setIsWhiteNext] = useState(true);
   const [selectedSquare, setSelectedSquare] = useState(null);
 
 
   const handleClick = (i) => {
+
     if (selectedSquare === null) {
       if (squares[i] && (squares[i] === 'W') === isWhiteNext) {
         setSelectedSquare(i);
       }
+      
     } else {
       const newSquares = squares.slice();
       const isWhite = squares[selectedSquare] === 'W';
@@ -77,10 +77,12 @@ const App = () => {
 
   return (
 
-    <Box width='99vw'>
+    <Box width='99vw' sx={{ border: '4px solid brown'}} display='flex' justifyContent='center' alignItems='center'>
 
-      <Box display='flex' alignItems='center' flexDirection='column'>
-        <Board squares={squares} onClick={handleClick}  />
+      <Box width={600} display='flex' justifyContent='center' alignItems='center' flexDirection='column' sx={{ border: '4px solid blue'}} className="game">
+
+        <Board squares={squares} onClick={handleClick} />
+
       </Box>
 
     </Box>

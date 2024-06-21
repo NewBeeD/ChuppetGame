@@ -7,12 +7,12 @@ const Cell = ({ isWhite, isKing }) => {
 
   let value = isWhite? 'red': isKing? 'blue' :'black';
   
-  let xs_size = 30;
-  let sm_size = 45;
+  let xs_size = 45;
+  let sm_size = 50;
   
   return (
     
-    <Box width={{xs: xs_size, sm: sm_size}} height={{xs: xs_size, sm: sm_size}} sx={{ backgroundColor: value, borderRadius: '100%', border: '2px solid brown'}} >
+    <Box width={{xs: xs_size, sm: sm_size}} height={{xs: xs_size, sm: sm_size}} sx={{ backgroundColor: value, borderRadius: '100%', border: '3px solid brown'}} >
 
     </Box>
   );

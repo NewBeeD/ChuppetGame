@@ -7,7 +7,7 @@ const Board = ({ squares, onClick }) => {
 
 
   const renderSquare = (i) => (
-    <Square key={i} value={squares[i]} onClick={() => onClick(i)} />
+    <Square key={i} value={squares[i]} tile_bg={(i % 8 + Math.floor(i / 8)) % 2 === 1? 'black': '#fbf5de'} onClick={() => onClick(i)} />
   );
 
   const createBoard = () => {

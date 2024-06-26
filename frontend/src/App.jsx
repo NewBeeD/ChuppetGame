@@ -19,7 +19,23 @@ const initializeBoard = () => {
   return board;
 };
 
+// Function to initialize the board with pieces
+const initial_Board = () => {
+  const board = Array(64).fill(null);
+  for (let i = 0; i < 64; i++) {
+    if ((i % 8 + Math.floor(i / 8)) % 2 === 1) {
+
+      console.log(i);
+      if (i < 24) board[i] = 'B';
+      if (i >= 40) board[i] = 'W';
+    }
+  }
+  return board;
+};
+
 const App = () => {
+
+  initial_Board()
 
   const [squares, setSquares] = useState(initializeBoard);
 

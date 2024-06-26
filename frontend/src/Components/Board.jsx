@@ -2,7 +2,9 @@ import { Box, Stack, Button } from '@mui/material'
 import Square from './Square';
 
 
+
 const Board = ({ squares, onClick }) => {
+
 
   const renderSquare = (i) => (
     <Square key={i} value={squares[i]} onClick={() => onClick(i)} />
@@ -23,9 +25,16 @@ const Board = ({ squares, onClick }) => {
 
 
       board.push(
-        <Box key={row} display='flex'>
+        <Stack 
+        direction='row' 
+        margin='auto' 
+        key={row} 
+        maxWidth={{xs: '95%'}} 
+        flexWrap='nowrap' 
+        >
+
           {rowSquares}
-        </Box>
+        </Stack>
       );
     }
 
@@ -33,13 +42,16 @@ const Board = ({ squares, onClick }) => {
   };
 
 
+
   return (
-    <Box sx={{ border: '3px solid black'}}>
+    <Box>
 
       {createBoard()}  
 
     </Box>
   );
 };
+
+
 
 export default Board;

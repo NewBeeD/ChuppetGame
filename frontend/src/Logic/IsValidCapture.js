@@ -1,6 +1,7 @@
 // Function to check if a capture move is valid
 export default function isValidCapture (from, to, squares, isWhite){
-  const piece = squares[from];
+  
+   const piece = squares[from];
   const isKing = piece === 'WK' || piece === 'BK';
   const direction = isWhite ? -1 : 1;
   const diff = to - from;

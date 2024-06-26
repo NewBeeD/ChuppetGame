@@ -1,13 +1,14 @@
 import { Box, Stack, Button } from '@mui/material'
 
 
+
 const Cell = ({ isWhite, isKing }) => {
 
   // <div className={`piece ${isWhite ? 'white' : 'black'} ${isKing ? 'king' : ''}`} />
 
   let value = isWhite? 'red': isKing? 'blue' :'black';
   
-  let xs_size = 45;
+  let xs_size = 38;
   let sm_size = 50;
   
   return (
@@ -17,5 +18,7 @@ const Cell = ({ isWhite, isKing }) => {
     </Box>
   );
 };
+
+
 
 export default Cell;

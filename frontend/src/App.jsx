@@ -23,6 +23,7 @@ const App = () => {
 
   const [squares, setSquares] = useState(initializeBoard);
 
+
   const [isWhiteNext, setIsWhiteNext] = useState(true);
   const [selectedSquare, setSelectedSquare] = useState(null);
 
@@ -77,16 +78,15 @@ const App = () => {
 
   return (
 
-    <Box width='99vw' sx={{ border: '4px solid brown'}} display='flex' justifyContent='center' alignItems='center'>
+    <Box width='99vw' height='99vh' display='flex' justifyContent='center' alignItems='center'> 
 
-      <Box width={600} display='flex' justifyContent='center' alignItems='center' flexDirection='column' sx={{ border: '4px solid blue'}} className="game">
+      <Box>
 
         <Board squares={squares} onClick={handleClick} />
 
       </Box>
 
     </Box>
-
 
   );
 };

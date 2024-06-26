@@ -25,7 +25,6 @@ const initial_Board = () => {
   for (let i = 0; i < 64; i++) {
     if ((i % 8 + Math.floor(i / 8)) % 2 === 1) {
 
-      console.log(i);
       if (i < 24) board[i] = 'B';
       if (i >= 40) board[i] = 'W';
     }
